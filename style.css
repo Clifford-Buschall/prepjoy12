@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0d0d0d;
+    color: #fff;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(6px);
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 100;
+}
+
+nav h2 {
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 400;
+    transition: color 0.3s ease-in-out, transform 0.1s ease-out;
+}
+
+.nav-links a:hover {
+    color: #ff9800;
+    transform: translateY(-1px);
+}
+
+.nav-links a.highlight {
+    color: #ff9800;
+    font-weight: 600;
+}
+
+
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./images/de711a3e1da9df95e923c538d2d54eae.jpg') center/cover no-repeat fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 120px 20px 50px;
+    /* leave space for fixed navbar */
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.85;
+    margin-bottom: 25px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-content {
+    animation: fadeUp 1s ease-out;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Keep search box centered and fixed-ish if needed */
+.search-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 50px;
+    /* add spacing below the search box */
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 250px;
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-box button {
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+    background: #ff9800;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #e68a00;
+}
+
+/* Reserve space for results to avoid shifting */
+#result {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    width: 70%;
+    min-height: 200px;
+    /* reserve space to prevent jump */
+}
+
+.food-card {
+    background: rgba(255, 255, 255, 0.224);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1 1 280px;
+    text-align: left;
+    /* <-- ensures all text aligns left */
+}
+
+.food-card .food-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+
+.food-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ff9800;
+}
+
+.food-card p {
+    font-size: 14px;
+    margin-bottom: 8px;
+    opacity: 0.9;
+}
+
+.food-card ul,
+.food-card ol {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.food-card li {
+    margin-bottom: 5px;
+}
+
+.food-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+
+        /* This section contains CSS specific to the Contact page */
+        .contact-container {
+            max-width: 700px;
+            margin: 100px auto 50px auto;
+            padding: 30px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            /* Light translucent background */
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .contact-container h1 {
+            font-size: 36px;
+            color: #ff9800;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .contact-container p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+
+        /* --- Form Styling --- */
+        .contact-form {
+            display: grid;
+            gap: 20px;
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 0;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #ff9800;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        /* Submit Button Styling */
+        .submit-button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #ff9800;
+            color: #0d0d0d;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+        }
+
+        .submit-button:hover {
+            background: #e68a00;
+        }
+
+        /* --- Other Contact Methods --- */
+        .social-links {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .social-links a {
+            color: #fff;
+            font-size: 24px;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #ff9800;
+        }
+
+        /* Ensure global styles are available */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0d0d0d;
+            color: #fff;
+        }
+@media(max-width:600px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}

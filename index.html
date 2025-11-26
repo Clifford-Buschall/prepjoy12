@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrepJoy</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav>
+        <h2>PREPJOY</h2>
+        <div class="nav-links">
+            <a href="index.html" class="highlight">Home</a>
+            <a href="about.html">About</a>
+            <a href="categories.html">Categories</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to PrepJoy Recipes</h1>
+            <p>Find any Ghanaian food instantly with our smart search tool.</p>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search for a food...">
+                <button onclick="searchRecipe()">Search</button>
+            </div>
+            <div id="result"></div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
