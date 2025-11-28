@@ -67,17 +67,18 @@ nav h2 {
         flex-direction: column;
         position: absolute;
         top: 65px;
-        right: 0;
-        background: #00000051;
-        width: 100%;
+        right: 40px;
+        background: #ffffff;
+        width: 50%;
         padding: 15px 0;
+        border-radius: 5px;
         border-top: 1px solid #eee;
         text-align: center;
     }
 
     .nav-links a {
         margin: 10px 0;
-        color: #ffffff; /* Visible on white background */
+        color: #000000; /* Visible on white background */
     }
 
     .menu-toggle {
@@ -265,96 +266,107 @@ nav h2 {
 }
 
 /* ----------------- About Page Styling ----------------- */
-.about-container {
-    padding: 100px 20px 50px; /* top padding avoids fixed nav overlap */
-    max-width: 900px;
-    margin: auto;
-}
+        .about-container {
+            margin-top: 120px; /* push content below navbar */
+            padding: 20px 20px 50px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-.about-box {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    line-height: 1.7;
-    margin-top: 30px;
-}
+        .about-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            line-height: 1.7;
+            margin-top: 30px;
+        }
 
-.about-box p {
-    margin-bottom: 20px;
-    font-size: 16px;
-    color: #f0f0f0;
-}
+        .about-box p {
+            margin-bottom: 20px;
+            font-size: 17px;
+            color: #f0f0f0;
+        }
 
-.section-title {
-    font-size: 22px;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    color: #ff9800;
-    font-weight: 600;
-}
+        .section-title {
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            color: #ff9800;
+            font-weight: 600;
+        }
 
-.title {
-    font-size: 36px;
-    text-align: center;
-    margin-bottom: 10px;
-    color: #ff9800;
-}
+        .title {
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 15px;
+            color: #ff9800;
+            font-weight: 700;
+        }
 
-.subtitle {
-    text-align: center;
-    margin-bottom: 40px;
-    opacity: 0.8;
-    font-size: 18px;
-}
+        .subtitle {
+            text-align: center;
+            margin-bottom: 40px;
+            opacity: 0.85;
+            font-size: 19px;
+            color: #e0e0e0;
+        }
 
-.footer-text {
-    text-align: center;
-    margin-top: 50px;
-    font-weight: 500;
-    opacity: 0.7;
-}
+        .footer-text {
+            text-align: center;
+            margin-top: 50px;
+            font-weight: 500;
+            opacity: 0.7;
+        }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .about-container {
-        padding: 80px 15px 40px;
-    }
+        /* ===== MOBILE RESPONSIVENESS ===== */
+        @media (max-width: 768px) {
+            .about-container {
+                margin-top: 100px;
+                padding: 10px 15px 40px;
+            }
 
-    .title {
-        font-size: 28px;
-    }
+            .title {
+                font-size: 30px;
+            }
 
-    .subtitle {
-        font-size: 16px;
-    }
+            .subtitle {
+                font-size: 16px;
+                margin-bottom: 30px;
+            }
 
-    .section-title {
-        font-size: 20px;
-    }
+            .section-title {
+                font-size: 20px;
+            }
 
-    .about-box p {
-        font-size: 15px;
-    }
-}
+            .about-box {
+                padding: 25px;
+            }
 
-@media (max-width: 420px) {
-    .about-box {
-        padding: 20px;
-    }
+            .about-box p {
+                font-size: 15px;
+            }
+        }
 
-    .title {
-        font-size: 24px;
-    }
+        @media (max-width: 420px) {
+            .about-container {
+                margin-top: 90px;
+            }
 
-    .section-title {
-        font-size: 18px;
-    }
+            .title {
+                font-size: 26px;
+            }
 
-    .about-box p {
-        font-size: 14px;
-    }
-}
+            .section-title {
+                font-size: 18px;
+            }
+
+            .about-box {
+                padding: 20px;
+            }
+        }
+
 
 
 /* Container and title styling (already responsive) */
