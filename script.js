@@ -1,9 +1,19 @@
 const toggle = document.getElementById('menuToggle');
 const navLinks = document.querySelector('.nav-links');
 
-toggle.addEventListener('click', () => {
+// Open/Close when clicking the toggle button
+toggle.addEventListener('click', (e) => {
+    e.stopPropagation(); // Prevent closing immediately
     navLinks.classList.toggle('active');
 });
+
+// Close when clicking anywhere outside the menu
+window.addEventListener('click', (e) => {
+    if (!navLinks.contains(e.target)) {
+        navLinks.classList.remove('active');
+    }
+});
+
 
 // Sample Ghanaian Foods
 const ghanaFoods = [
